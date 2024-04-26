@@ -1,0 +1,30 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        entry: ruff check
+        args: ["."]
+        pass_filenames: false
+        require_serial: true
+        language: system
+        types: [ python ]
+      - id: ruff-format
+        name: ruff-format
+        entry: ruff format
+        require_serial: true
+        language: system
+        types: [ python ]
+      - id: mypy
+        name: mypy
+        entry: mypy
+        require_serial: true
+        language: system
+        types: [ python ]
+      - id: pytest
+        name: pytest
+        entry: pytest
+        pass_filenames: false
+        require_serial: true
+        language: system
+        types: [ python ]
