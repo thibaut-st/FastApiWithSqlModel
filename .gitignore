@@ -1,4 +1,5 @@
 .idea
 
-src/__pycache__/
+*.pyc
+
 /src/database/database.db
